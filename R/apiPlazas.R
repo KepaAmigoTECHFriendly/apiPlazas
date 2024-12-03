@@ -15,14 +15,10 @@
 apiPlazas <- function(){
 
   URL <- "https://apiparking.sol-fix.es/api/parking?code=pcPMFVeRnjEMyL1QOmPD9f0NnLuGbZsan2uh1ghQsJXkAzFur64Xkw%3D%3D"
-
-  json <- '{
-  "FechaUTC": "2024-06-05T00:04:20",
-  "Municipio": "Almusaffes",
-  "Id_Municipio": 78,
-  "Token": "C.U8gxS!DuFN&HWm]2;M!["
-  }'
-
+  
+  formatted_time <- format(Sys.time(), "%Y-%m-%dT%H:%M:%S")
+  json <- paste('{"FechaUTC": "',formatted_time,'","Municipio": "Almusaffes","Id_Municipio": 78,"Token": "C.U8gxS!DuFN&HWm]2;M!["}',sep = "")
+  
   post <- httr::POST(url = URL,
                      add_headers("Content-Type"="application/json","Accept"="application/json"),
                      body = json,
