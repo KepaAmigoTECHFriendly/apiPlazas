@@ -14,13 +14,13 @@
 
 apiPlazas <- function(){
 
-  URL <- "https://apiparking.sol-fix.es/api/parking?code=q7pF1Fo1kgfOxcN-wwx58lWFvz27EB_wSd23su6ZwOgrAzFux-iKaw%3D%3D"
+  URL <- "https://apiparking.sol-fix.es/api/parking?code=pcPMFVeRnjEMyL1QOmPD9f0NnLuGbZsan2uh1ghQsJXkAzFur64Xkw%3D%3D"
 
   json <- '{
   "FechaUTC": "2024-06-05T00:04:20",
   "Municipio": "Almusaffes",
   "Id_Municipio": 78,
-  "Token": "AlMu$$a2024ParkinApi"
+  "Token": "C.U8gxS!DuFN&HWm]2;M!["
   }'
 
   post <- httr::POST(url = URL,
